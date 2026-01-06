@@ -1,0 +1,47 @@
+
+Que 1.	Identify at least 3 real-world applications and specify:
+
+        Which type of database they use (SQL / NoSQL / In-memory)
+
+        Why that database is suitable
+        
+        
+Answer: SQL -> SQL databases are used in the applications where the data stored should be in a structured way.
+	    -> SQL databases are used when we want to take advantage of ACID properties to ensure data consistency.
+	    -> SQL databases have strict schema, helps to use joins and establish relationship between tables . 
+	    -> SQL databases could also be used in a read intensive business application. 
+	    -> Priority - Consistency 
+	    -> Application faces downtime to make data consistent example IRCTC website faces downtime from 12:00 AM - 12:20 AM.  
+	    
+	    Use Case
+		1. Banking application, in banking application, data consistency is our top priority.
+		2. Healthcare application to store patients data in a structured format.
+		3. IRCTC website, uses ACID properties to manage users data, users Transaction, Train Details etc.   
+		Example: MySQL, Postgres.
+		
+		
+	NoSQL -> NoSQL databases are used in the applications where the data is stored in an unstructured way.
+	      -> NoSQL databases are used when we want to take advantage of flexible schema, write/retrieve without caring about the schema.
+	      -> NoSQL databases is used in a write intensive business application.
+	      -> NoSQL databases can be scaled easily as compared to SQL databases (horizontal scaling)
+	      -> Priority - Availability 
+	      -> Application does not faces Downtime but data is inconsistent for users.
+	      
+	      Use Case
+	      	1. IOT Devices, able to handle large amount of unstructured data because here data is continuously generated. 
+	      	2. Netwoking application, uses Graph-based databases (a type of Nosqsl db) to connect different nodes using edges.
+	      	3. Google Docs uses NoSQL databases to stores docs in JSON format.
+	      	4. E-Commerce Platforms for managing the products catalog as NoSQl Database prefer high Availability.
+	      	5. Big Data Analytics managing large volume of unstructured data (Big Data). example Hbase.
+	      	Example: MongoDB, Amazon DynamoDB, Couchbase
+	      	
+	      	
+	In-memory DBS -> when data is stored temporarily but is very important.
+		      -> to improve performance, throughput, latency of the application.
+		      -> uses RAM for data storage, not disk drives thus fast as it requires more number of cycles to access data from disk drives	
+		
+		Use Case 
+		1. Login/Registration system, caching users data like session keys, freq accessed data, user profile etc.
+		2. Managing session of the logged-in user example when we log in into amazon.com the site stores our session thus we don't have to login again when we open a new window. 
+		3. Leetcode/CodeChef uses In-memory Database to show live leaderboard and instant rank updates when we submit a correct solution.  
+		Example: Redis, Memcached
