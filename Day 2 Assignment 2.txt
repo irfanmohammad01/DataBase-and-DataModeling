@@ -1,0 +1,23 @@
+Que1. Describe a real-world system where:
+
+	i) Soft deletes are required
+
+	ii)Hard deletes are preferred
+	
+	
+	
+Answer: i) Soft delete are required in the system which stores crucial data or where users are allowed to recover the data in a given time interval. 
+		It helps in recovering unexpected data deletion. 
+		
+	example: Instagram account - user account are removed using soft delete.
+		 Google Drive - Documents deleted can be recovered from bin. 
+		 Banking sector - Transaction Data are removed using soft delete.
+		 
+	
+	ii) Hard delete are required in the system which wants to minimize storage cost making db simple or users cannot delete data unexpectedly. 
+		Once data deleted cannot be recovered.
+		
+
+	example: GitHub Website's server - user can only delete the repo when path/url entered and authenticator code.
+		 Google Chrome Incognito Data - Browsing history data deleted when user closes the window. 
+		 
