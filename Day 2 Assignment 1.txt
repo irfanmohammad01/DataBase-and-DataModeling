@@ -1,0 +1,25 @@
+1. Submit the GIT repo link as a submission on Openverse
+
+    Given the table Orders:
+
+        id  	user_id 	status 		created_at
+
+1. Suggest appropriate indexes
+
+2. Explain why you chose them
+
+
+Answer 1.   (i). Indexing on  id, user_id and created_at attributes.
+	   (ii). Composite indexing on (user_id, created_at) and (status, created_at)
+	   
+	   
+Answer 2.
+	Applying Indexing on id (orders), user_id(orders) would improve query performance. As it contains unique values and after applying indexing, the indices will be in sorted order and SQL uses binary search to improve searching process. Thus making fetching data efficient.
+	
+	Applying Indexing on created_at will be useful if the time based query are frequent. for faster analytics.  
+	
+	Applying Composite Indexing on (user_id, created_at) will help us to see same users with different order creation date together in an order. Faster analytics. 
+	
+	Applying Composite Indexing on (status, created_at) will help to group similar status with created_at timestamp in an order. Thus Indexing helps in faster analytics.
+
+
