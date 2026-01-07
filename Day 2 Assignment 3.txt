@@ -1,0 +1,23 @@
+Que. 
+A query frequently runs:
+
+SELECT * FROM bookings
+
+WHERE doctor_id = ?
+
+AND appointment_date >= ?
+
+AND appointment_date <= ?;
+
+Propose a composite index
+Explain column order choice.
+
+
+Answer: Composite Indexing on (doctor_id, appointment_date) this will group different doctor_id's with appointment_date in order. 
+	Thus when SQL cursor begins the searching process it will fetch the fields effitiently. 
+	
+	
+	Column order choice should be (doctor_id, appointment_date). SQL cursor will directly jump on doctor_id and fetch required appointment_date. 
+	
+	Grouping is done based on doctor_id and appointment_date are in sorted order.
+
